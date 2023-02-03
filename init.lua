@@ -8,4 +8,7 @@ require('plugin-config.telescope')
 require('plugin-config.nvim-treesitter')
 require('plugin-config.mason')
 require('plugin-config.vimtex')
-require('plugin-config.ultisnips')
+require('plugin-config.cmp')
+require('plugin-config.luasnips')
+require('lsp.lspconfig')
+

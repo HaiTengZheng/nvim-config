@@ -1,15 +1,19 @@
 return require('packer').startup({function(use)
 	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+	use { 'wbthomason/packer.nvim' }
 
 	-- Vimtex
-	use 'lervag/vimtex'
+	use { 'lervag/vimtex' }
 
 	-- Ultisnips
-	use 'SirVer/ultisnips'
+	-- use { 'SirVer/ultisnips' }
+	
+	-- luasnips
+	use { 'L3MON4D3/LuaSnip', tag = 'v<CurrentMajor>.*' }
+
 
 	-- color scheme
-	use 'ellisonleao/gruvbox.nvim'
+	use { 'ellisonleao/gruvbox.nvim' }
 
 	-- nvim-tree
 	use {
@@ -36,13 +40,32 @@ return require('packer').startup({function(use)
     }
 
 	-- blank indent
-	use "lukas-reineke/indent-blankline.nvim"
+	use { 'lukas-reineke/indent-blankline.nvim' }
 	
 	---------- LSP ----------
 	
 	-- mason
-	use { "williamboman/mason.nvim" }
-end,
+	use { 'williamboman/mason.nvim' }
+
+	-- mason-lsp
+	use { 'williamboman/mason-lspconfig.nvim' }
+
+	-- lsp
+	use {'neovim/nvim-lspconfig' }
+
+	--- dap
+	use { 'mfussenegger/nvim-dap' }
+
+	--- cmp
+	use { 'hrsh7th/cmp-nvim-lsp' }
+	use { 'hrsh7th/cmp-buffer' }
+	use { 'hrsh7th/cmp-path' }
+	use { 'hrsh7th/cmp-cmdline' }
+	use { 'hrsh7th/nvim-cmp' }
+	use { 'saadparwaiz1/cmp_luasnip' }
+
+	
+end, 
 
 	-- floating window
 	config = {
