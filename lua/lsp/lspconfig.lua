@@ -29,3 +29,7 @@ lsp['ltex'].setup({
 lsp['sumneko_lua'].setup({
 	on_attach = custom
 })
+
+lsp[ 'clangd' ].setup({
+	on_attach =  custom
+})

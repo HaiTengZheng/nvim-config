@@ -11,4 +11,3 @@ require('plugin-config.vimtex')
 require('plugin-config.cmp')
 require('plugin-config.luasnips')
 require('lsp.lspconfig')
-

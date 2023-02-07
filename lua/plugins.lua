@@ -39,8 +39,6 @@ return require('packer').startup({function(use)
         run = ':TSUpdate'
     }
 
-	-- blank indent
-	use { 'lukas-reineke/indent-blankline.nvim' }
 	
 	---------- LSP ----------
 	
