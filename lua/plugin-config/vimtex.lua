@@ -4,4 +4,19 @@ vim.cmd([[
 	let g:vimtex_quickfix_mode=0
 	set conceallevel=2
 	let g:vimtex_compiler_method='latexmk'
+    let g:vimtex_compiler_latexmk = {
+        \ 'build_dir' : '',
+        \ 'callback' : 1,
+        \ 'continuous' : 1,
+        \ 'executable' : 'latexmk',
+        \ 'hooks' : [],
+        \ 'options' : [
+		\   '-xelatex',
+        \   '-verbose',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
+<
 ]])

@@ -29,7 +29,7 @@ map('n', '<space>q', vim.diagnostic.setloclist, opt)
 -- luasnips
 -- choice nodes
 -- set keybinds for both INSERT and VISUAL.
-map("i", "<C-n>", "<Plug>luasnip-next-choice", {})
-map("s", "<C-n>", "<Plug>luasnip-next-choice", {})
-map("i", "<C-p>", "<Plug>luasnip-prev-choice", {})
-map("s", "<C-p>", "<Plug>luasnip-prev-choice", {})
+map("i", "<C-n>", "<Plug>luasnip-next-choice", opt)
+map("s", "<C-n>", "<Plug>luasnip-next-choice", opt)
+map("i", "<C-p>", "<Plug>luasnip-prev-choice", opt)
+map("s", "<C-p>", "<Plug>luasnip-prev-choice", opt)

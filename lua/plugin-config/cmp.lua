@@ -87,7 +87,7 @@ local luasnip = require("luasnip")
 
 cmp.setup({
 	mapping = {
-		["<Tab>"] = cmp.mapping(function(fallback)
+		["<C-j>"] = cmp.mapping(function(fallback)
 		if cmp.visible() then
 			cmp.select_next_item()
 			-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable() 
@@ -101,7 +101,7 @@ cmp.setup({
 		end
 		end, { "i", "s" }),
 
-		["<S-Tab>"] = cmp.mapping(function(fallback)
+		["<S-j>"] = cmp.mapping(function(fallback)
 		if cmp.visible() then
 			cmp.select_prev_item()
 		elseif luasnip.jumpable(-1) then
