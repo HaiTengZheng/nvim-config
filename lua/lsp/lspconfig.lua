@@ -1,7 +1,7 @@
 local custom = function(client, bufnr)
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	local bufopts = { noremap=true, silent=true, buffer=bufnr }
+	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 	local map = vim.keymap.set
 	map('n', 'gD', vim.lsp.buf.declaration, bufopts)
 	map('n', 'gd', vim.lsp.buf.definition, bufopts)
@@ -26,10 +26,14 @@ lsp['ltex'].setup({
 	on_attach = custom
 })
 
-lsp['sumneko_lua'].setup({
+lsp['lua_ls'].setup({
 	on_attach = custom
 })
 
-lsp[ 'clangd' ].setup({
-	on_attach =  custom
+lsp['clangd'].setup({
+	on_attach = custom
+})
+
+lsp['csharp_ls'].setup({
+	on_attach = custom
 })

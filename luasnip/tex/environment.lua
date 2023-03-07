@@ -12,10 +12,10 @@ return {
 	-- default
 	s({ trig='beg', dscr='begin{} / end{}'},
 		fmt([[
-			\begin{<>}
+			\begin{<>}<>
 				<>
 			\end{<>}]],
-			{ i(1), i(0), rep(1) },
+			{ i(1), i(2), i(0), rep(1) },
 			{ delimiters='<>' }
 		)
 	),
@@ -42,11 +42,16 @@ return {
 	),
 
 	s({ trig='desc', dscr='description'},
-		fmt([[\begin{description}
+		fmt([[
+			\begin{description}
 				\item[<>] <>
 			\end{description}]],
 			{ i(1), i(0) },
 			{ delimiters='<>' }
 		)
 	),
+
+	a({ trig='\\use', desr="usepackage"},
+		fmta([[\usepackage{<>}<>]],
+			{ i(1), i(0) })),
 }

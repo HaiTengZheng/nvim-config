@@ -1,9 +1,11 @@
 # 用 LuaSnip 帮助更好的 Latex 写作
 ## 安装
+推荐使用 packer 来管理插件   
 <https://github.com/L3MON4D3/LuaSnip>
-## 配置 luasnip, 在 fedora 中使用 neovim 以及 lua
+## 使用 lua 配置 luasnip (我在 fedora 下使用 neovim)
 > luasnip-config-reference  
 
+我个人的配置 <https://github.com/HaiTengZheng/nvim-config>  
 在 ~/.config/nvim/lua/ 下创建 luasnip.lua 文件，在 ~/.config/nvim/ 下创建 luasnip 目录，并配置如下基本配置
 ```lua
 local ls = require('luasnip')
@@ -12,7 +14,7 @@ ls.config.set_config({
     history = true,
     -- 允许自动扩展
     enable_autosnippets = true,
-    -- 
+    -- 可视节点快捷键
     store_selection_keys = "<Tab>",
     -- 在选择节点中时行末尾出现标识
     ext_opts = {
@@ -79,9 +81,10 @@ local postfix = require("luasnip.extras.postfix").postfix
 local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 ```
-# 从创建片段的例子开始
+以上声明将会在片段中使用
+# 从创建片段的模板开始
 ```
-s
+
 ```
 # 片段 
 ## 

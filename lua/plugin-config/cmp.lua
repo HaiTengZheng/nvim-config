@@ -12,11 +12,11 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		['<C-b>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		['<C-Space>'] = cmp.mapping.complete(),
+		--['<C-b>'] = cmp.mapping.scroll_docs(-4),
+		--['<C-f>'] = cmp.mapping.scroll_docs(4),
+		--['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
-		['<CR>'] = cmp.mapping.confirm({ select = true }),  -- Accept currently selected item. 
+		['<Cr>'] = cmp.mapping.confirm({ select = true }),  -- Accept currently selected item. 
 															--Set `select` to `false` to only confirm explicitly selected items.
 	}),
 	sources = cmp.config.sources({
@@ -66,7 +66,7 @@ require('lspconfig')['ltex'].setup {
 	capabilities = capabilities
 }
 
-require('lspconfig')['sumneko_lua'].setup {
+require('lspconfig')['lua_ls'].setup {
 	capabilities = capabilities
 }
 

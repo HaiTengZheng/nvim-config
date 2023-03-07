@@ -26,23 +26,6 @@ a("snipf",
 		)
 ),
 
--- simple text snippet
---s("snipt",
---	fmt([[ 
---			<>(<>, {t('<>')}<>
---			<>)<>,
---		]],
---		{
---			c(1, { t("s"), t("a") }),
---			c(2, { i(nil, "trig"), sn(nil, { t("{trig='"), i(1), t("'}") }) }),
---			i(3, "text"),
---			i(4, ""), --opts
---			i(5),
---			i(0),
---		},
---		{ delimiters = "<>" }
---	)
---),
 
 a('ssa',
 	fmt([[
@@ -56,11 +39,15 @@ a({ trig='saa', dscr='..'},
 	fmt([[
 			a({ trig='<>', desr="<>"},
 				fmta(<>,
-					{ <> })
-				{ condition=math }),
+					{ <> })),
 		]],
 		{ i(1), i(2), i(3), i(4) },
 		{ delimiters='<>' }
 	)
 ),
+	a({ trig='{', desr="autocomplet curly brackets"},
+		fmta([[{<>}<>]],
+			{ i(1), i(0) }
+		)
+	),
 }

@@ -5,7 +5,7 @@ local a = require("luasnip").extend_decorator.apply(s, { snippetType = "autosnip
 
 return {
 	-- subscript and supscript
-	a({ trig='(%a)^(%d)', regTrig=true, dscr='auto supscript for 2+ digits '},
+	a({ trig='(%a)(%d)', regTrig=true, dscr='auto supscript for 2+ digits '},
 		fmt([[<>^{<>} ]],
 			{ f(function(_, snip) return snip.captures[1] end),
 			f(function(_, snip) return snip.captures[2] end) },
@@ -21,7 +21,7 @@ return {
 		),
 			{ condition=math }
 	),
-	a({ trig='(%a)_(%d)', regTrig=true, dscr='auto subscript for 2+ digits'},
+	a({ trig='(%a)(%d)', regTrig=true, dscr='auto subscript for 2+ digits'},
 		fmt([[<>_{<>} ]],
 			{ f(function(_, snip) return snip.captures[1] end),
 			f(function(_, snip) return snip.captures[2] end)},
@@ -61,12 +61,6 @@ return {
 			{ delimiters='<>' })
 	),
 
-	-- 
-	a({trig='iff', dscr="iff"}, {t('\\iff ')}, { condition=math }),
-	a({trig='EE', dscr="geq"}, {t('\\exists ')}, { condition=math }),
-	a({trig='AA', dscr="for all"}, {t('\\forall ')}, { condition=math }),
-	a({trig='nabl', dscr="nala"}, {t('\\nabla ')}, { condition=math }),
-	a({trig='xx', dscr="cross"}, {t('\\times ')}, { condition=math }),
 
 	s({ trig='lrv', name='left right', dscr='left right'},
     fmt([[\left(<>\right)<>]],

@@ -14,10 +14,10 @@ map('n', "<A-m>", ":NvimTreeToggle<CR>", opt)
 
 
 -- Telescope
--- search file
 map('n', "<C-f>", ":Telescope find_files<CR>", opt)
--- global search
 map('n', "<C-g>", ":Telescope live_grep<CR>", opt)
+map('n', '<C-b>', ":Telescope buffers<CR>", opt)
+map('n', '<C-h>', ":Telescope help_tags<CR>", opt)
 
 -- nvim-lsp
 -- vim.diagnostic
