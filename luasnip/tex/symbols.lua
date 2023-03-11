@@ -17,10 +17,12 @@ return {
 	a({trig='iff', dscr="iff"}, {t('\\iff ')}, { condition=math }), -- if and only if
 	a({trig='EE', dscr="exists"}, {t('\\exists ')}, { condition=math }),
 	a({trig='AA', dscr="for all"}, {t('\\forall ')}, { condition=math }),
+	--
 	a({trig='nabla', dscr="nabla"}, {t('\\nabla ')}, { condition=math }),
 	-- 
 	a({trig='!=', dscr="not equal to"}, {t('\\neq ')}, { condition=math }),
-	a({trig='>=', dscr="greater than or equal to"}, {t('\\ge ')}, { condition=math }),
+	a({trig='<=', dscr="lesser than or equal to"}, {t('\\leq ')}, { condition=math }),
+	a({trig='>=', dscr="greater than or equal to"}, {t('\\geq ')}, { condition=math }),
 	a({trig='>>', dscr="much greater than"}, {t('\\gg ')}, { condition=math }),
 	a({trig='<<', dscr="much less than"}, {t('\\ll ')}, { condition=math }),
 	a({trig='xx', dscr="cross"}, {t('\\times ')}, { condition=math }),

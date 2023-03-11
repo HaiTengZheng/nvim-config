@@ -13,7 +13,7 @@ return {
 		),
 			{ condition=math }
 	),
-	a({ trig='(%a)^(%w%w)', regTrig=true, dscr='auto supscript for 2+ digits '},
+	a({ trig='(%a)^(.%w)', regTrig=true, dscr='auto supscript for 2+ digits '},
 		fmt([[<>^{<>} ]],
 			{ f(function(_, snip) return snip.captures[1] end),
 			f(function(_, snip) return snip.captures[2] end) },
